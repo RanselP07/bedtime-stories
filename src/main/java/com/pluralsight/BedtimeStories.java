@@ -41,15 +41,17 @@ public class BedtimeStories {
         try {
             BufferedReader bufReader = new BufferedReader(new FileReader(fileName));
             String line = bufReader.readLine();
+            int i = 1;
 
             while (line != null) {
-                System.out.println(line);
+                System.out.println(i + ". " + line);
                 line = bufReader.readLine();
+                i++;
             }
 
         } catch (FileNotFoundException e) {
             System.out.print("Input was out of range.");
-        }catch (IOException e) {
+        } catch (IOException e) {
             System.out.print("You have a talent for breaking things!!");
         }
 
